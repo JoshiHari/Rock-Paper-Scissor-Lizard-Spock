@@ -133,7 +133,7 @@ playerInpts.forEach((element) => {
         });
         scaleMove.style.transform = "scale(1)"
 
-    },2000)
+    },1000)
     
   });
 });
