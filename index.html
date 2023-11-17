@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors Lizard Spock</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Welcome to Rock Paper Scissors Lizard Spock</h1>
+    <div class="container">
+      
+      <div class="player">
+        <input type="text" placeholder="Enter your name"/>
+        <img src="Images/athlete.png"/>
+        <div class="buttons">
+          <button class="move stone"></button><button class="move paper"></button
+          ><button class="move scissors"></button><button class="move lizard"></button
+          ><button class="move spock"></button>
+          <div class="score">
+            <p>Score: <span>0</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="result">
+        <img src="Images/equal.png">
+        <p></p>
+
+      </div>
+      <div class="computer">
+        <p>Shelbot</p>
+        <img  src="Images/hacker.png"/>
+        <div class="buttons">
+          <button class="move stone"></button><button class="move paper"></button
+          ><button class="move scissors"></button><button class="move lizard"></button
+          ><button class="move spock"></button>
+          <div class="score">
+            <p>Score: <span>0</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button onclick=reset() id="reset"></button>
+    <div class="results">
+       
+      <div class="round">
+        <p>Round <span>0</span>/10</p>
+      </div>
+      <div class="finalResult">
+        <p> Player Wins!!</p>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
