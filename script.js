@@ -8,6 +8,11 @@ var compInpts = document.querySelectorAll(
   ".container > .computer > .buttons > button"
 );
 
+compInpts.forEach(element => {
+  element.disabled = false;
+  
+});
+
 var result = true;
 var playerWin;
 
