@@ -362,5 +362,16 @@ body > .container > .computer > .score{
 .results{
   display: none;
 }
+#reset {
+  position: relative;
+  
+  background-image: url(Images/reset.png);
+  height: 2.5em;
+  width: 10%;
+  background-size: contain;
+  text-decoration: none;
+  background-repeat: no-repeat;
+  margin-top: 1%;
+}
 }
 

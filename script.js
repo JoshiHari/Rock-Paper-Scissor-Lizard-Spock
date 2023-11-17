@@ -43,6 +43,10 @@ function reset(){
         "Images/equal.png";
         document.querySelector(".container > .player > img").style.border = "";
         document.querySelector(".container > .computer > img").style.border = "";
+    if(window.matchMedia('(max-width: 600px')){
+      document.querySelector(".container > .result > img ").style.rotate = "-90deg"
+        "Images/equal.png";
+    }
     
 }
 
