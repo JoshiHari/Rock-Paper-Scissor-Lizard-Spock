@@ -55,7 +55,7 @@ h1 {
 
 .player > *,
 .computer > * {
-  margin-bottom: 10%;
+  margin-bottom: 8%;
 }
 
 .computer > .buttons {
@@ -168,7 +168,7 @@ img {
 
 .results > .round {
   font-size: 30px;
-  margin: 5%;
+  margin: 4%;
 }
 
 .results > .finalResult {
