@@ -83,8 +83,7 @@ playerInpts.forEach((element) => {
     if (whoWon == true) {
         
       if(window.matchMedia('(max-width: 600px').matches){
-        document.querySelector(".container > .result > img ").src =
-        "Images/is-greater-than.png";
+       
         document.querySelector(".container > .result > img ").style.rotate =
         "90deg";
       }
@@ -96,13 +95,22 @@ playerInpts.forEach((element) => {
         ".container > .player > .score > p > span"
       ).innerHTML = playerScore;
     }
-    if (whoWon == false) {
+    else if (whoWon == false) {
+      if(window.matchMedia('(max-width: 600px').matches){
+       
+        document.querySelector(".container > .result > img ").style.rotate =
+        "90deg";
+      }
       document.querySelector(".container > .result > img ").src =
         "Images/less-than.png";
       computerScore++;
       document.querySelector(
         ".container > .computer  > .score > p > span"
       ).innerHTML = computerScore;
+    }
+    else {
+      document.querySelector(".container > .result > img ").style.rotate =
+        "";
     }
     document.querySelector(".mob   > .round > p > span").innerHTML = roundCounter;
 
@@ -115,8 +123,8 @@ playerInpts.forEach((element) => {
             console.log(playerName)
             document.querySelector(".mob > .finalResult").style.display = "block"
             document.querySelector(".mob > .finalResult").innerHTML = `${playerName} Wins!!!`;
-            document.querySelector(".container > .player > img").style.border = "5px solid green";
-            document.querySelector(".container > .computer > img").style.border = "5px solid red";
+            document.querySelector(".container > .player > img").style.border = "3px solid green";
+            document.querySelector(".container > .computer > img").style.border = "3px solid red";
             
         }
         else if(playerScore == computerScore){
@@ -126,8 +134,8 @@ playerInpts.forEach((element) => {
         else{
             document.querySelector(".mob > .finalResult").style.display = "block"
             document.querySelector(".mob > .finalResult").innerHTML = `Shelbot Wins!!!`;
-            document.querySelector(".container > .player > img").style.border = "5px solid red";
-            document.querySelector(".container > .computer > img").style.border = "5px solid green";
+            document.querySelector(".container > .player > img").style.border = "3px solid red";
+            document.querySelector(".container > .computer > img").style.border = "3px solid green";
         }
     }
 
