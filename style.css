@@ -8,7 +8,7 @@
 
 }
 
-@media only screen and (min-width: 599px) {
+@media only screen and (min-width: 601px) {
   body {
     display: flex;
     height: 100vh;
@@ -18,9 +18,13 @@
   }
 
   .mob{
-    display: none;
+    display: block;
+    margin: 5%;
   }
 
+  .mob > *{
+    margin: 5%;
+  }
   h1 {
     margin-top: 1%;
   }
@@ -170,12 +174,12 @@
     border: 0px;
   }
 
-  .results > .round {
+  .mob > .round {
     font-size: 30px;
     margin: 4%;
   }
 
-  .results > .finalResult {
+  .mob > .finalResult {
     font-size: 30px;
     display: none;
   }
@@ -355,6 +359,8 @@ body > .container > .computer > .score{
   margin-top: 2%;
 }
 
-
+.results{
+  display: none;
+}
 }
 

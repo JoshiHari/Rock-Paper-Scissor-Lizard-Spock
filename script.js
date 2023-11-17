@@ -26,13 +26,13 @@ function reset(){
     roundCounter = 0;
     playerScore = 0;
     computerScore = 0;
-    document.querySelector(".results > .finalResult").style.display = "none"
+    document.querySelector(".mob > .finalResult").style.display = "none"
     document.querySelector(
-        ".container > .computer >.buttons > .score > p > span"
+        ".container > .computer  > .score > p > span"
       ).innerHTML = computerScore;
-      document.querySelector(".results > .round > p > span").innerHTML = roundCounter;
+      document.querySelector(".mob > .round > p > span").innerHTML = roundCounter;
       document.querySelector(
-        ".container > .player >.buttons > .score > p > span"
+        ".container > .player > .score > p > span"
       ).innerHTML = playerScore;
 
       playerInpts.forEach(element => {
@@ -78,12 +78,18 @@ playerInpts.forEach((element) => {
         roundCounter++;
     if (whoWon == true) {
         
+      if(window.matchMedia('(max-width: 600px').matches){
+        document.querySelector(".container > .result > img ").src =
+        "Images/is-greater-than.png";
+        document.querySelector(".container > .result > img ").style.rotate =
+        "90deg";
+      }
       document.querySelector(".container > .result > img ").src =
         "Images/is-greater-than.png";
       playerScore++;
 
       document.querySelector(
-        ".container > .player >.buttons > .score > p > span"
+        ".container > .player > .score > p > span"
       ).innerHTML = playerScore;
     }
     if (whoWon == false) {
@@ -91,10 +97,10 @@ playerInpts.forEach((element) => {
         "Images/less-than.png";
       computerScore++;
       document.querySelector(
-        ".container > .computer >.buttons > .score > p > span"
+        ".container > .computer  > .score > p > span"
       ).innerHTML = computerScore;
     }
-    document.querySelector(".results > .round > p > span").innerHTML = roundCounter;
+    document.querySelector(".mob   > .round > p > span").innerHTML = roundCounter;
 
     if(roundCounter >= 10){
         playerInpts.forEach(element => {
@@ -103,19 +109,19 @@ playerInpts.forEach((element) => {
         });
         if(playerScore > computerScore){
             console.log(playerName)
-            document.querySelector(".results > .finalResult").style.display = "block"
-            document.querySelector(".results > .finalResult").innerHTML = `${playerName} Wins!!!`;
+            document.querySelector(".mob > .finalResult").style.display = "block"
+            document.querySelector(".mob > .finalResult").innerHTML = `${playerName} Wins!!!`;
             document.querySelector(".container > .player > img").style.border = "5px solid green";
             document.querySelector(".container > .computer > img").style.border = "5px solid red";
             
         }
         else if(playerScore == computerScore){
-            document.querySelector(".results > .finalResult").style.display = "block"
-            document.querySelector(".results > .finalResult").innerHTML = `It's a tie`;
+            document.querySelector(".mob > .finalResult").style.display = "block"
+            document.querySelector(".mob > .finalResult").innerHTML = `It's a tie`;
         }
         else{
-            document.querySelector(".results > .finalResult").style.display = "block"
-            document.querySelector(".results > .finalResult").innerHTML = `Shelbot Wins!!!`;
+            document.querySelector(".mob > .finalResult").style.display = "block"
+            document.querySelector(".mob > .finalResult").innerHTML = `Shelbot Wins!!!`;
             document.querySelector(".container > .player > img").style.border = "5px solid red";
             document.querySelector(".container > .computer > img").style.border = "5px solid green";
         }
@@ -179,3 +185,6 @@ function determineWinner(move, compMove) {
       return;
   }
 }
+
+
+// media query function changes
